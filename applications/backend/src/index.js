@@ -54,7 +54,9 @@ const startServer = async () => {
     await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      ssl: false,
+      ssl: true,
+      tls: true,
+      tlsInsecure: true,  // For development only, remove in production
       directConnection: true,
       retryWrites: false,
       serverSelectionTimeoutMS: 30000,

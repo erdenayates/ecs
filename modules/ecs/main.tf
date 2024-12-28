@@ -69,7 +69,7 @@ resource "aws_ecs_task_definition" "backend" {
       environment = [
         {
           name  = "MONGODB_URI"
-          value = "mongodb://${var.documentdb_master_username}:${var.documentdb_password}@${var.documentdb_endpoint}:27017/myapp?tls=false&retryWrites=false&directConnection=true"
+          value = "mongodb://${var.documentdb_master_username}:${var.documentdb_password}@${var.documentdb_endpoint}:27017/myapp?retryWrites=false&directConnection=true"
         }
       ]
       logConfiguration = {
