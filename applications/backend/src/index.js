@@ -13,50 +13,68 @@ app.use(express.json());
 
 // MongoDB connection
 const MONGODB_URI = process.env.MONGODB_URI;
-console.log('Attempting to connect to MongoDB with URI:', MONGODB_URI);
+console.log('Attempting to connect to MongoDB with URI:', MONGODB_URI.replace(/:([^:@]+)@/, ':****@'));
 
+// Test TCP connection first
 const testConnection = () => {
   const [host, port] = MONGODB_URI.split('@')[1].split(':');
-  console.log(`Testing connection to ${host}:27017`);
+  console.log(`Testing TCP connection to ${host}:27017`);
   
   const client = new net.Socket();
   client.setTimeout(5000);
   
-  client.on('connect', () => {
-    console.log('TCP Connection successful!');
-    client.destroy();
+  return new Promise((resolve, reject) => {
+    client.on('connect', () => {
+      console.log('TCP Connection successful!');
+      client.destroy();
+      resolve();
+    });
+    
+    client.on('timeout', () => {
+      console.log('TCP Connection timeout!');
+      client.destroy();
+      reject(new Error('TCP Connection timeout'));
+    });
+    
+    client.on('error', (err) => {
+      console.log('TCP Connection error:', err);
+      client.destroy();
+      reject(err);
+    });
+    
+    client.connect(27017, host);
   });
-  
-  client.on('timeout', () => {
-    console.log('Connection timeout!');
-    client.destroy();
-  });
-  
-  client.on('error', (err) => {
-    console.log('Connection error:', err);
-    client.destroy();
-  });
-  
-  client.connect(27017, host);
 };
 
-testConnection();
+// Wait for TCP connection before trying MongoDB
+const startServer = async () => {
+  try {
+    await testConnection();
+    
+    await mongoose.connect(MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      ssl: false,
+      directConnection: true,
+      retryWrites: false,
+      serverSelectionTimeoutMS: 30000,
+      socketTimeoutMS: 30000,
+      connectTimeoutMS: 30000,
+    });
+    
+    console.log('Connected to DocumentDB');
+    
+    // Start server only after DB connection
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+  } catch (error) {
+    console.error('Failed to connect:', error);
+    process.exit(1);
+  }
+};
 
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  ssl: false,
-  directConnection: true,
-  retryWrites: false,
-  serverSelectionTimeoutMS: 30000,
-  socketTimeoutMS: 30000,
-  connectTimeoutMS: 30000,
-}).then(() => {
-  console.log('Connected to DocumentDB');
-}).catch((error) => {
-  console.error('Error connecting to DocumentDB:', error);
-  console.error('Error details:', error.message);
-});
+startServer();
 
 // Add connection event listeners
 mongoose.connection.on('connected', () => {
@@ -101,8 +119,4 @@ app.post('/tasks', async (req, res) => {
     console.error('Error creating task:', error);
     res.status(400).json({ error: 'Error creating task', details: error.message });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
 }); 
