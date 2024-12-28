@@ -117,6 +117,8 @@ resource "aws_ecs_service" "backend" {
     container_name   = "backend"
     container_port   = 3000
   }
+
+  enable_execute_command = true
 }
 
 # Security Groups
@@ -240,6 +242,28 @@ resource "aws_iam_role_policy" "ecs_task_execution_role_policy_ssm" {
         Resource = [
           aws_ssm_parameter.mongodb_password.arn
         ]
+      }
+    ]
+  })
+}
+
+# Add SSM policy to the task role
+resource "aws_iam_role_policy" "ecs_task_ssm_policy" {
+  name = "${var.environment}-task-ssm-policy"
+  role = aws_iam_role.ecs_task_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "ssmmessages:CreateControlChannel",
+          "ssmmessages:CreateDataChannel",
+          "ssmmessages:OpenControlChannel",
+          "ssmmessages:OpenDataChannel"
+        ]
+        Resource = "*"
       }
     ]
   })
