@@ -49,6 +49,7 @@ resource "aws_security_group" "docdb" {
     to_port         = 27017
     protocol        = "tcp"
     security_groups = [var.ecs_security_group_id]
+    description     = "Allow MongoDB traffic from ECS tasks"
   }
 
   # Allow all outbound traffic

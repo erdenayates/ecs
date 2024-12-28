@@ -60,7 +60,7 @@ resource "aws_ecs_task_definition" "backend" {
       environment = [
         {
           name  = "MONGODB_URI"
-          value = "mongodb://${var.documentdb_endpoint}:27017/myapp"
+          value = "mongodb://${var.documentdb_master_username}:${var.documentdb_password}@${var.documentdb_endpoint}:27017/myapp?retryWrites=false"
         }
       ]
       secrets = [
