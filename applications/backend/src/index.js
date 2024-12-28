@@ -94,6 +94,18 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'healthy' });
 });
 
+// Root route for debugging
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Backend API is running',
+    endpoints: [
+      { path: '/health', method: 'GET', description: 'Health check endpoint' },
+      { path: '/tasks', method: 'GET', description: 'Get all tasks' },
+      { path: '/tasks', method: 'POST', description: 'Create a new task' }
+    ]
+  });
+});
+
 // Routes
 app.get('/tasks', async (req, res) => {
   try {
