@@ -47,6 +47,7 @@ module "ecs" {
   
   alb_target_group_arn_frontend = module.alb.target_group_arn_frontend
   alb_target_group_arn_backend  = module.alb.target_group_arn_backend
+  alb_security_group_id         = module.alb.security_group_id
   
   documentdb_endpoint = module.documentdb.endpoint
   documentdb_password = var.documentdb_password
@@ -66,5 +67,9 @@ module "documentdb" {
   environment         = var.environment
   vpc_id             = module.networking.vpc_id
   private_subnet_ids = module.networking.private_subnet_ids
-  password           = var.documentdb_password
+  master_password    = var.documentdb_password
+  master_username    = var.documentdb_master_username
+  instance_count     = var.documentdb_instance_count
+  instance_class     = var.documentdb_instance_class
+  ecs_security_group_id = module.ecs.backend_security_group_id
 } 

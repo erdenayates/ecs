@@ -68,4 +68,22 @@ variable "documentdb_password" {
   description = "DocumentDB master password"
   type        = string
   sensitive   = true
+}
+
+variable "documentdb_instance_count" {
+  description = "Number of DocumentDB instances"
+  type        = number
+  default     = 2
+}
+
+variable "documentdb_instance_class" {
+  description = "Instance class for DocumentDB instances"
+  type        = string
+  default     = "db.t3.medium"
+}
+
+variable "documentdb_master_username" {
+  description = "Master username for DocumentDB cluster"
+  type        = string
+  default     = "admin"
 } 
