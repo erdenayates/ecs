@@ -35,20 +35,27 @@ app.get('/health', (req, res) => {
 // Routes
 app.get('/tasks', async (req, res) => {
   try {
+    console.log('Fetching tasks...');
     const tasks = await Task.find();
+    console.log('Found tasks:', tasks);
     res.json(tasks);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching tasks' });
+    console.error('Error fetching tasks:', error);
+    res.status(500).json({ error: 'Error fetching tasks', details: error.message });
   }
 });
 
 app.post('/tasks', async (req, res) => {
   try {
+    console.log('Received task creation request:', req.body);
     const task = new Task(req.body);
-    await task.save();
-    res.status(201).json(task);
+    console.log('Created task object:', task);
+    const savedTask = await task.save();
+    console.log('Saved task:', savedTask);
+    res.status(201).json(savedTask);
   } catch (error) {
-    res.status(400).json({ error: 'Error creating task' });
+    console.error('Error creating task:', error);
+    res.status(400).json({ error: 'Error creating task', details: error.message });
   }
 });
 
