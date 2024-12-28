@@ -26,8 +26,8 @@ backend_cpu     = 512
 backend_memory  = 1024
 
 # Container Images with your AWS Account ID
-frontend_image = "792334107397.dkr.ecr.us-west-2.amazonaws.com/task-manager-frontend:latest"
-backend_image  = "792334107397.dkr.ecr.us-west-2.amazonaws.com/task-manager-backend:latest"
+frontend_image = "public.ecr.aws/h2n4d7m6/task-manager-frontend:latest"
+backend_image  = "public.ecr.aws/h2n4d7m6/task-manager-backend:latest"
 
 # DocumentDB Configuration
 documentdb_instance_count = 2
