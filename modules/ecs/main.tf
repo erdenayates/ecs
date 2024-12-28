@@ -30,6 +30,10 @@ resource "aws_ecs_task_definition" "frontend" {
         {
           name  = "BACKEND_URL"
           value = "http://${var.alb_dns_name}:3000"
+        },
+        {
+          name  = "REACT_APP_API_URL"
+          value = "http://${var.alb_dns_name}:3000"
         }
       ]
       logConfiguration = {
