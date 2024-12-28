@@ -66,7 +66,7 @@ resource "aws_ecs_task_definition" "backend" {
       secrets = [
         {
           name      = "MONGODB_PASSWORD"
-          valueFrom = var.documentdb_password
+          valueFrom = aws_ssm_parameter.mongodb_password.arn
         }
       ]
       logConfiguration = {
@@ -209,6 +209,40 @@ resource "aws_cloudwatch_log_group" "frontend" {
 resource "aws_cloudwatch_log_group" "backend" {
   name              = "/ecs/${var.environment}/backend"
   retention_in_days = 30
+}
+
+# Add SSM Parameter for MongoDB password
+resource "aws_ssm_parameter" "mongodb_password" {
+  name        = "/${var.environment}/mongodb/password"
+  description = "MongoDB password for backend application"
+  type        = "SecureString"
+  value       = var.documentdb_password
+
+  tags = {
+    Environment = var.environment
+  }
+}
+
+# Add permission to read SSM parameter to ECS execution role
+resource "aws_iam_role_policy" "ecs_task_execution_role_policy_ssm" {
+  name = "${var.environment}-task-exec-ssm-policy"
+  role = aws_iam_role.ecs_execution_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "ssm:GetParameters",
+          "secretsmanager:GetSecretValue"
+        ]
+        Resource = [
+          aws_ssm_parameter.mongodb_password.arn
+        ]
+      }
+    ]
+  })
 }
 
 data "aws_region" "current" {} 
