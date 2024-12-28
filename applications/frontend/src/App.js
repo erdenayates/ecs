@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost';
 
   useEffect(() => {
     fetchTasks();
@@ -15,11 +15,12 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch(`${API_URL}/tasks`);
+      const response = await fetch(`${API_URL}/api/tasks`);
       const data = await response.json();
       setTasks(data);
       setLoading(false);
     } catch (err) {
+      console.error('Error fetching tasks:', err);
       setError('Failed to fetch tasks');
       setLoading(false);
     }
@@ -28,7 +29,7 @@ function App() {
   const addTask = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${API_URL}/tasks`, {
+      const response = await fetch(`${API_URL}/api/tasks`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,6 +40,7 @@ function App() {
       setTasks([...tasks, data]);
       setNewTask('');
     } catch (err) {
+      console.error('Error adding task:', err);
       setError('Failed to add task');
     }
   };
