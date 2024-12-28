@@ -26,6 +26,12 @@ resource "aws_ecs_task_definition" "frontend" {
           protocol      = "tcp"
         }
       ]
+      environment = [
+        {
+          name  = "BACKEND_URL"
+          value = "http://${var.alb_dns_name}:3000"
+        }
+      ]
       logConfiguration = {
         logDriver = "awslogs"
         options = {

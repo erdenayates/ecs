@@ -71,4 +71,9 @@ variable "documentdb_password" {
 variable "documentdb_master_username" {
   description = "DocumentDB master username"
   type        = string
+}
+
+variable "alb_dns_name" {
+  description = "DNS name of the Application Load Balancer"
+  type        = string
 } 
