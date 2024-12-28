@@ -11,10 +11,17 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/taskmanager';
+const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  ssl: true,
+  sslValidate: false,
+  retryWrites: false
+}).then(() => {
+  console.log('Connected to DocumentDB');
+}).catch((error) => {
+  console.error('Error connecting to DocumentDB:', error);
 });
 
 // Health check endpoint

@@ -51,6 +51,7 @@ module "ecs" {
   
   documentdb_endpoint = module.documentdb.endpoint
   documentdb_password = var.documentdb_password
+  documentdb_master_username = var.documentdb_master_username
 }
 
 module "alb" {
