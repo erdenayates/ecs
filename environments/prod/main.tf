@@ -2,11 +2,10 @@ terraform {
   required_version = ">= 1.0.0"
   
   backend "s3" {
-    bucket         = "erd-terraform-state-bucket"
-    key            = "prod/terraform.tfstate"
-    region         = "us-west-2"
-    dynamodb_table = "terraform-state-lock"
-    encrypt        = true
+    bucket = "erd-terraform-state-bucket"
+    key    = "prod/terraform.tfstate"
+    region = "us-west-2"
+    encrypt = true
   }
 
   required_providers {
