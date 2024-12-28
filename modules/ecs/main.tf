@@ -40,6 +40,9 @@ resource "aws_ecs_task_definition" "frontend" {
           awslogs-stream-prefix = "frontend"
         }
       }
+      linuxParameters = {
+        initProcessEnabled = true
+      }
     }
   ])
 }
@@ -101,6 +104,8 @@ resource "aws_ecs_service" "frontend" {
     container_name   = "frontend"
     container_port   = 80
   }
+
+  enable_execute_command = true
 }
 
 resource "aws_ecs_service" "backend" {
