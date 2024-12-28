@@ -77,6 +77,9 @@ resource "aws_ecs_task_definition" "backend" {
           awslogs-stream-prefix = "backend"
         }
       }
+      linuxParameters = {
+        initProcessEnabled = true
+      }
     }
   ])
 }
