@@ -66,4 +66,9 @@ variable "documentdb_endpoint" {
 variable "documentdb_password" {
   description = "DocumentDB password SSM parameter ARN"
   type        = string
+}
+
+variable "documentdb_master_username" {
+  description = "DocumentDB master username"
+  type        = string
 } 

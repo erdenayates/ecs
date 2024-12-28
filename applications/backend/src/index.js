@@ -12,16 +12,19 @@ app.use(express.json());
 
 // MongoDB connection
 const MONGODB_URI = process.env.MONGODB_URI;
+console.log('Attempting to connect to MongoDB with URI:', MONGODB_URI);
+
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  ssl: true,
-  sslValidate: false,
+  ssl: false,
+  directConnection: true,
   retryWrites: false
 }).then(() => {
   console.log('Connected to DocumentDB');
 }).catch((error) => {
   console.error('Error connecting to DocumentDB:', error);
+  console.error('Error details:', error.message);
 });
 
 // Health check endpoint
