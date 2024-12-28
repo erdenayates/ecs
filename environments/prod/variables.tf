@@ -85,5 +85,5 @@ variable "documentdb_instance_class" {
 variable "documentdb_master_username" {
   description = "Master username for DocumentDB cluster"
   type        = string
-  default     = "admin"
+  default     = "dbadmin"
 } 

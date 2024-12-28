@@ -32,7 +32,7 @@ backend_image  = "792334107397.dkr.ecr.us-west-2.amazonaws.com/backend:latest"
 # DocumentDB Configuration
 documentdb_instance_count = 2
 documentdb_instance_class = "db.t3.medium"
-documentdb_master_username = "admin"
+documentdb_master_username = "dbadmin"
 # Note: Don't store sensitive values in terraform.tfvars
 # Use environment variables or AWS Secrets Manager instead
 # documentdb_password = "CHANGE_ME_AND_USE_ENV_VAR" 
