@@ -29,11 +29,11 @@ resource "aws_ecs_task_definition" "frontend" {
       environment = [
         {
           name  = "BACKEND_URL"
-          value = "http://${var.alb_dns_name}:3000"
+          value = "https://${var.alb_dns_name}"
         },
         {
           name  = "REACT_APP_API_URL"
-          value = "http://${var.alb_dns_name}"
+          value = "https://${var.alb_dns_name}"
         }
       ]
       logConfiguration = {
