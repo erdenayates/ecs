@@ -25,9 +25,9 @@ frontend_memory = 512
 backend_cpu     = 512
 backend_memory  = 1024
 
-# Container Images (you'll need to replace these with your actual ECR repository URLs)
-frontend_image = "YOUR_AWS_ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/frontend:latest"
-backend_image  = "YOUR_AWS_ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/backend:latest"
+# Container Images with your AWS Account ID
+frontend_image = "792334107397.dkr.ecr.us-west-2.amazonaws.com/frontend:latest"
+backend_image  = "792334107397.dkr.ecr.us-west-2.amazonaws.com/backend:latest"
 
 # DocumentDB Configuration
 documentdb_instance_count = 2
