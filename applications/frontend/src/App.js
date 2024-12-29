@@ -200,7 +200,7 @@ function App() {
                   onChange={() => toggleComplete(task)}
                   className="task-checkbox"
                 />
-                <span className="task-title">{task.title}</span>
+                <span className="task-title" title={task.title}>{task.title}</span>
                 <div className="task-actions">
                   <button onClick={() => startEditing(task)} className="edit-btn">
                     Edit
