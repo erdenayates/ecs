@@ -66,12 +66,12 @@ module "alb" {
 module "documentdb" {
   source = "../../modules/documentdb"
   
-  environment         = var.environment
-  vpc_id             = module.networking.vpc_id
-  private_subnet_ids = module.networking.private_subnet_ids
-  master_password    = var.documentdb_password
-  master_username    = var.documentdb_master_username
-  instance_count     = var.documentdb_instance_count
-  instance_class     = var.documentdb_instance_class
-  ecs_security_group_id = module.ecs.backend_security_group_id
+  environment             = var.environment
+  vpc_id                 = module.networking.vpc_id
+  private_subnet_ids     = module.networking.private_subnet_ids
+  instance_count         = var.documentdb_instance_count
+  instance_class         = var.documentdb_instance_class
+  master_username        = var.documentdb_master_username
+  master_password        = var.documentdb_password
+  backend_security_group_id = module.ecs.backend_security_group_id
 } 
