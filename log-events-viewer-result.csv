@@ -1,0 +1,201 @@
+timestamp,message,logStreamName
+1735470947567,"10.0.102.61 - - [29/Dec/2024:11:15:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735470947568,"10.0.102.61 - - [29/Dec/2024:11:15:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735470976365,"10.0.103.140 - - [29/Dec/2024:11:16:16 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735470976367,"10.0.103.140 - - [29/Dec/2024:11:16:16 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735470977365,"10.0.101.176 - - [29/Dec/2024:11:16:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735470977366,"10.0.101.176 - - [29/Dec/2024:11:16:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735470977598,"10.0.102.61 - - [29/Dec/2024:11:16:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735470977599,"10.0.102.61 - - [29/Dec/2024:11:16:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471006392,"10.0.103.140 - - [29/Dec/2024:11:16:46 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471006393,"10.0.103.140 - - [29/Dec/2024:11:16:46 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471007395,"10.0.101.176 - - [29/Dec/2024:11:16:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471007396,"10.0.101.176 - - [29/Dec/2024:11:16:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471007609,"10.0.102.61 - - [29/Dec/2024:11:16:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471007612,"10.0.102.61 - - [29/Dec/2024:11:16:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471010663,"2024/12/29 11:16:50 [notice] 7#7: using the ""epoll"" event method",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010663,2024/12/29 11:16:50 [notice] 7#7: nginx/1.27.3,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010663,2024/12/29 11:16:50 [notice] 7#7: built by gcc 13.2.1 20240309 (Alpine 13.2.1_git20240309) ,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010663,2024/12/29 11:16:50 [notice] 7#7: OS: Linux 5.10.228-219.884.amzn2.x86_64,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010664,2024/12/29 11:16:50 [notice] 7#7: getrlimit(RLIMIT_NOFILE): 65535:65535,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010665,2024/12/29 11:16:50 [notice] 7#7: start worker processes,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010665,2024/12/29 11:16:50 [notice] 7#7: start worker process 15,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471010665,2024/12/29 11:16:50 [notice] 7#7: start worker process 16,frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471033982,"2024/12/29 11:17:13 [notice] 7#7: using the ""epoll"" event method",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033982,2024/12/29 11:17:13 [notice] 7#7: nginx/1.27.3,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033982,2024/12/29 11:17:13 [notice] 7#7: built by gcc 13.2.1 20240309 (Alpine 13.2.1_git20240309) ,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033982,2024/12/29 11:17:13 [notice] 7#7: OS: Linux 5.10.228-219.884.amzn2.x86_64,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033982,2024/12/29 11:17:13 [notice] 7#7: getrlimit(RLIMIT_NOFILE): 65535:65535,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033983,2024/12/29 11:17:13 [notice] 7#7: start worker processes,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033983,2024/12/29 11:17:13 [notice] 7#7: start worker process 16,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471033983,2024/12/29 11:17:13 [notice] 7#7: start worker process 17,frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471035191,"10.0.102.61 - - [29/Dec/2024:11:17:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471035191,"10.0.103.140 - - [29/Dec/2024:11:17:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471035192,"10.0.101.176 - - [29/Dec/2024:11:17:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471036393,"10.0.103.140 - - [29/Dec/2024:11:17:16 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471036394,"10.0.103.140 - - [29/Dec/2024:11:17:16 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471037397,"10.0.101.176 - - [29/Dec/2024:11:17:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471037398,"10.0.101.176 - - [29/Dec/2024:11:17:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471037612,"10.0.102.61 - - [29/Dec/2024:11:17:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471037613,"10.0.102.61 - - [29/Dec/2024:11:17:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471053429,"10.0.102.61 - - [29/Dec/2024:11:17:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471053437,"10.0.103.140 - - [29/Dec/2024:11:17:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471053461,"10.0.101.176 - - [29/Dec/2024:11:17:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471065183,"10.0.103.140 - - [29/Dec/2024:11:17:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471065184,"10.0.101.176 - - [29/Dec/2024:11:17:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471065188,"10.0.102.61 - - [29/Dec/2024:11:17:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471066395,"10.0.103.140 - - [29/Dec/2024:11:17:46 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471066395,"10.0.103.140 - - [29/Dec/2024:11:17:46 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471067402,"10.0.101.176 - - [29/Dec/2024:11:17:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471067403,"10.0.101.176 - - [29/Dec/2024:11:17:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471067615,"10.0.102.61 - - [29/Dec/2024:11:17:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471067616,"10.0.102.61 - - [29/Dec/2024:11:17:47 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471083442,"10.0.102.61 - - [29/Dec/2024:11:18:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471083444,"10.0.101.176 - - [29/Dec/2024:11:18:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471083450,"10.0.103.140 - - [29/Dec/2024:11:18:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471093376,"10.0.103.140 - - [29/Dec/2024:11:18:13 +0000] ""GET / HTTP/1.1"" 304 0 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"" ""89.186.28.14""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471095194,"10.0.103.140 - - [29/Dec/2024:11:18:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471095196,"10.0.101.176 - - [29/Dec/2024:11:18:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471095201,"10.0.102.61 - - [29/Dec/2024:11:18:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471096402,"10.0.103.140 - - [29/Dec/2024:11:18:16 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471096403,"10.0.103.140 - - [29/Dec/2024:11:18:16 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471097401,"10.0.101.176 - - [29/Dec/2024:11:18:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471097622,"10.0.102.61 - - [29/Dec/2024:11:18:17 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471113446,"10.0.102.61 - - [29/Dec/2024:11:18:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471113449,"10.0.101.176 - - [29/Dec/2024:11:18:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471113468,"10.0.103.140 - - [29/Dec/2024:11:18:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471125203,"10.0.103.140 - - [29/Dec/2024:11:18:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471125208,"10.0.101.176 - - [29/Dec/2024:11:18:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471125213,"10.0.102.61 - - [29/Dec/2024:11:18:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471133343,"10.0.103.140 - - [29/Dec/2024:11:18:53 +0000] ""GET / HTTP/1.1"" 304 0 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"" ""89.186.28.14""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471143459,"10.0.102.61 - - [29/Dec/2024:11:19:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471143465,"10.0.101.176 - - [29/Dec/2024:11:19:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471143472,"10.0.103.140 - - [29/Dec/2024:11:19:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471153623,"10.0.103.140 - - [29/Dec/2024:11:19:13 +0000] ""GET / HTTP/1.1"" 304 0 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"" ""89.186.28.14""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471154009,"10.0.103.140 - - [29/Dec/2024:11:19:14 +0000] ""GET / HTTP/1.1"" 304 0 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"" ""89.186.28.14""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471155207,"10.0.103.140 - - [29/Dec/2024:11:19:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471155221,"10.0.101.176 - - [29/Dec/2024:11:19:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471155226,"10.0.102.61 - - [29/Dec/2024:11:19:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471173472,"10.0.102.61 - - [29/Dec/2024:11:19:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471173476,"10.0.101.176 - - [29/Dec/2024:11:19:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471173485,"10.0.103.140 - - [29/Dec/2024:11:19:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471185220,"10.0.103.140 - - [29/Dec/2024:11:19:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471185233,"10.0.101.176 - - [29/Dec/2024:11:19:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471185235,"10.0.102.61 - - [29/Dec/2024:11:19:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471203477,"10.0.101.176 - - [29/Dec/2024:11:20:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471203492,"10.0.102.61 - - [29/Dec/2024:11:20:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471203493,"10.0.103.140 - - [29/Dec/2024:11:20:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471215231,"10.0.103.140 - - [29/Dec/2024:11:20:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471215239,"10.0.101.176 - - [29/Dec/2024:11:20:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471215247,"10.0.102.61 - - [29/Dec/2024:11:20:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471233496,"10.0.101.176 - - [29/Dec/2024:11:20:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471233505,"10.0.102.61 - - [29/Dec/2024:11:20:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471233511,"10.0.103.140 - - [29/Dec/2024:11:20:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471245242,"10.0.101.176 - - [29/Dec/2024:11:20:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471245243,"10.0.103.140 - - [29/Dec/2024:11:20:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471245260,"10.0.102.61 - - [29/Dec/2024:11:20:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471263515,"10.0.101.176 - - [29/Dec/2024:11:21:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471263521,"10.0.102.61 - - [29/Dec/2024:11:21:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471263531,"10.0.103.140 - - [29/Dec/2024:11:21:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471275255,"10.0.101.176 - - [29/Dec/2024:11:21:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471275255,"10.0.103.140 - - [29/Dec/2024:11:21:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471275268,"10.0.102.61 - - [29/Dec/2024:11:21:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471291852,"10.0.102.61 - - [29/Dec/2024:11:21:31 +0000] ""GET / HTTP/1.1"" 304 0 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"" ""89.186.28.14""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471292237,"10.0.102.61 - - [29/Dec/2024:11:21:32 +0000] ""GET / HTTP/1.1"" 304 0 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"" ""89.186.28.14""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471293527,"10.0.102.61 - - [29/Dec/2024:11:21:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471293535,"10.0.101.176 - - [29/Dec/2024:11:21:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471293548,"10.0.103.140 - - [29/Dec/2024:11:21:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471305259,"10.0.103.140 - - [29/Dec/2024:11:21:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471305270,"10.0.101.176 - - [29/Dec/2024:11:21:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471305271,"10.0.102.61 - - [29/Dec/2024:11:21:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471323540,"10.0.102.61 - - [29/Dec/2024:11:22:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471323542,"10.0.101.176 - - [29/Dec/2024:11:22:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471323563,"10.0.103.140 - - [29/Dec/2024:11:22:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471335271,"10.0.103.140 - - [29/Dec/2024:11:22:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471335280,"10.0.101.176 - - [29/Dec/2024:11:22:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471335283,"10.0.102.61 - - [29/Dec/2024:11:22:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471353544,"10.0.102.61 - - [29/Dec/2024:11:22:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471353561,"10.0.101.176 - - [29/Dec/2024:11:22:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471353580,"10.0.103.140 - - [29/Dec/2024:11:22:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471365284,"10.0.103.140 - - [29/Dec/2024:11:22:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471365293,"10.0.101.176 - - [29/Dec/2024:11:22:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471365297,"10.0.102.61 - - [29/Dec/2024:11:22:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471383562,"10.0.102.61 - - [29/Dec/2024:11:23:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471383572,"10.0.101.176 - - [29/Dec/2024:11:23:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471383601,"10.0.103.140 - - [29/Dec/2024:11:23:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471395296,"10.0.103.140 - - [29/Dec/2024:11:23:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471395299,"10.0.101.176 - - [29/Dec/2024:11:23:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471395308,"10.0.102.61 - - [29/Dec/2024:11:23:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471407913,"2024/12/29 11:23:27 [notice] 7#7: signal 15 (SIGTERM) received from 1, exiting",frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407913,2024/12/29 11:23:27 [notice] 20#20: exiting,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407913,2024/12/29 11:23:27 [notice] 19#19: exiting,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407917,2024/12/29 11:23:27 [notice] 19#19: exit,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407917,2024/12/29 11:23:27 [notice] 20#20: exit,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407963,2024/12/29 11:23:27 [notice] 7#7: signal 14 (SIGALRM) received,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407972,2024/12/29 11:23:27 [notice] 7#7: signal 17 (SIGCHLD) received from 20,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407972,2024/12/29 11:23:27 [notice] 7#7: worker process 20 exited with code 0,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407972,2024/12/29 11:23:27 [notice] 7#7: signal 29 (SIGIO) received,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407972,2024/12/29 11:23:27 [notice] 7#7: signal 17 (SIGCHLD) received from 19,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407972,2024/12/29 11:23:27 [notice] 7#7: worker process 19 exited with code 0,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471407974,2024/12/29 11:23:27 [notice] 7#7: exit,frontend/frontend/23e3037ddb24470694b6a321248d6499
+1735471413565,"10.0.102.61 - - [29/Dec/2024:11:23:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471413591,"10.0.101.176 - - [29/Dec/2024:11:23:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471413619,"10.0.103.140 - - [29/Dec/2024:11:23:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471425307,"10.0.103.140 - - [29/Dec/2024:11:23:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471425311,"10.0.102.61 - - [29/Dec/2024:11:23:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471425311,"10.0.101.176 - - [29/Dec/2024:11:23:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471429337,"10.0.102.61 - - [29/Dec/2024:11:23:49 +0000] ""GET /.env HTTP/1.1"" 200 500 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36"" ""51.161.83.117""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471429497,"10.0.102.61 - - [29/Dec/2024:11:23:49 +0000] ""POST / HTTP/1.1"" 405 559 ""-"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36"" ""51.161.83.117""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471443584,"10.0.102.61 - - [29/Dec/2024:11:24:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471443608,"10.0.101.176 - - [29/Dec/2024:11:24:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471443637,"10.0.103.140 - - [29/Dec/2024:11:24:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471454461,"2024/12/29 11:24:14 [notice] 7#7: signal 15 (SIGTERM) received from 1, exiting",frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454461,2024/12/29 11:24:14 [notice] 16#16: exiting,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454461,2024/12/29 11:24:14 [notice] 16#16: exit,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454461,2024/12/29 11:24:14 [notice] 15#15: exiting,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454462,2024/12/29 11:24:14 [notice] 15#15: exit,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454511,2024/12/29 11:24:14 [notice] 7#7: signal 14 (SIGALRM) received,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454537,2024/12/29 11:24:14 [notice] 7#7: signal 17 (SIGCHLD) received from 15,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454537,2024/12/29 11:24:14 [notice] 7#7: worker process 15 exited with code 0,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454537,2024/12/29 11:24:14 [notice] 7#7: signal 29 (SIGIO) received,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454538,2024/12/29 11:24:14 [notice] 7#7: signal 17 (SIGCHLD) received from 16,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454538,2024/12/29 11:24:14 [notice] 7#7: worker process 16 exited with code 0,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471454540,2024/12/29 11:24:14 [notice] 7#7: exit,frontend/frontend/65b0700da7a648978a67e4aeb5204ef9
+1735471455308,"10.0.103.140 - - [29/Dec/2024:11:24:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471455318,"10.0.102.61 - - [29/Dec/2024:11:24:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471455324,"10.0.101.176 - - [29/Dec/2024:11:24:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471473593,"10.0.102.61 - - [29/Dec/2024:11:24:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471473629,"10.0.101.176 - - [29/Dec/2024:11:24:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471473653,"10.0.103.140 - - [29/Dec/2024:11:24:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471485317,"10.0.103.140 - - [29/Dec/2024:11:24:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471485327,"10.0.102.61 - - [29/Dec/2024:11:24:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471485335,"10.0.101.176 - - [29/Dec/2024:11:24:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471503605,"10.0.102.61 - - [29/Dec/2024:11:25:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471503629,"10.0.101.176 - - [29/Dec/2024:11:25:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471503677,"10.0.103.140 - - [29/Dec/2024:11:25:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471515329,"10.0.103.140 - - [29/Dec/2024:11:25:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471515333,"10.0.102.61 - - [29/Dec/2024:11:25:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471515348,"10.0.101.176 - - [29/Dec/2024:11:25:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471533624,"10.0.102.61 - - [29/Dec/2024:11:25:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471533631,"10.0.101.176 - - [29/Dec/2024:11:25:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471533682,"10.0.103.140 - - [29/Dec/2024:11:25:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471545341,"10.0.103.140 - - [29/Dec/2024:11:25:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471545346,"10.0.102.61 - - [29/Dec/2024:11:25:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471545359,"10.0.101.176 - - [29/Dec/2024:11:25:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471563643,"10.0.101.176 - - [29/Dec/2024:11:26:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471563643,"10.0.102.61 - - [29/Dec/2024:11:26:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471563699,"10.0.103.140 - - [29/Dec/2024:11:26:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471575354,"10.0.102.61 - - [29/Dec/2024:11:26:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471575354,"10.0.103.140 - - [29/Dec/2024:11:26:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471575371,"10.0.101.176 - - [29/Dec/2024:11:26:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471593661,"10.0.102.61 - - [29/Dec/2024:11:26:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471593662,"10.0.101.176 - - [29/Dec/2024:11:26:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471593719,"10.0.103.140 - - [29/Dec/2024:11:26:33 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471605366,"10.0.102.61 - - [29/Dec/2024:11:26:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471605366,"10.0.103.140 - - [29/Dec/2024:11:26:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471605384,"10.0.101.176 - - [29/Dec/2024:11:26:45 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471623672,"10.0.101.176 - - [29/Dec/2024:11:27:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471623677,"10.0.102.61 - - [29/Dec/2024:11:27:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471623738,"10.0.103.140 - - [29/Dec/2024:11:27:03 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/d3d1f5e8f1ac43cdba97e28f32481f6c
+1735471635367,"10.0.102.61 - - [29/Dec/2024:11:27:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
+1735471635372,"10.0.103.140 - - [29/Dec/2024:11:27:15 +0000] ""GET / HTTP/1.1"" 200 500 ""-"" ""ELB-HealthChecker/2.0"" ""-""",frontend/frontend/766b90c97885420abdd1fa158594800b
