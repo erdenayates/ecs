@@ -180,7 +180,7 @@ li {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
-  padding: 1.5rem;
+  padding: 1rem;
   background: var(--background);
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -193,26 +193,20 @@ li {
 }
 
 .task-item {
-  padding: 0.8rem 1rem;
-  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
   background: var(--white);
   border-left: 4px solid var(--primary-blue);
   border-radius: 8px;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
   min-width: 0;
 }
 
 .task-item:hover {
   transform: translateX(5px);
   box-shadow: var(--hover-shadow);
-}
-
-.task-item.completed {
-  border-left-color: var(--success);
-  background: #f8f9fa;
+  background: var(--background);
 }
 
 .task-content {
@@ -221,14 +215,7 @@ li {
   gap: 1rem;
   width: 100%;
   min-width: 0;
-}
-
-.task-checkbox {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  border: 2px solid var(--primary-blue);
-  border-radius: 4px;
+  padding: 0.3rem 0;
 }
 
 .task-title {
@@ -239,11 +226,7 @@ li {
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
-}
-
-.completed .task-title {
-  text-decoration: line-through;
-  color: var(--text-secondary);
+  padding-left: 0.5rem;
 }
 
 .task-actions {
@@ -252,15 +235,16 @@ li {
   flex-shrink: 0;
 }
 
-.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+.edit-btn, .delete-btn {
   padding: 0.4rem 0.8rem;
+  min-width: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
   border: none;
   border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  min-width: 60px;
+  text-transform: none;
 }
 
 .edit-btn {
@@ -273,6 +257,46 @@ li {
   color: white;
 }
 
+.edit-btn:hover, .delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  opacity: 0.9;
+}
+
+/* Edit mode styles */
+.edit-mode {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid var(--primary-light);
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 0;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.save-btn, .cancel-btn {
+  padding: 0.4rem 0.8rem;
+  min-width: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: none;
+}
+
 .save-btn {
   background: var(--success);
   color: white;
@@ -283,89 +307,32 @@ li {
   color: white;
 }
 
-.edit-btn:hover, .delete-btn:hover, .save-btn:hover, .cancel-btn:hover {
+/* Add Task form styles */
+.add-task-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid var(--primary-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.add-task-form button {
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: none;
+}
+
+.add-task-form button:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-}
-
-.edit-mode {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-}
-
-.edit-input {
-  flex: 1;
-  padding: 0.5rem;
-  border: 2px solid var(--primary-light);
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.edit-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* Animation for completed tasks */
-@keyframes completeTask {
-  from {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.completed {
-  animation: completeTask 0.3s ease forwards;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .task-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .task-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .edit-mode {
-    flex-direction: column;
-  }
-
-  .edit-buttons {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .edit-btn, .delete-btn, .save-btn, .cancel-btn {
-    width: 48%;
-  }
-}
-
-.task-title {
-  position: relative;
-}
-
-.task-title:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  background: var(--text-primary);
-  color: white;
-  padding: 0.5rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  white-space: normal;
-  max-width: 300px;
-  z-index: 1000;
-  display: block;
 } 

@@ -17,7 +17,6 @@ function App() {
   };
 
   const API_URL = getApiUrl();
-  console.log('Using API URL:', API_URL);
 
   useEffect(() => {
     fetchTasks();
@@ -26,7 +25,6 @@ function App() {
   const fetchTasks = async () => {
     try {
       const url = `${API_URL}/api/tasks`;
-      console.log('Fetching tasks from:', url);
       const response = await fetch(url, {
         headers: {
           'Accept': 'application/json',
@@ -40,7 +38,6 @@ function App() {
       }
 
       const data = await response.json();
-      console.log('Received tasks:', data);
       setTasks(data);
       setLoading(false);
     } catch (err) {
@@ -133,30 +130,6 @@ function App() {
     }
   };
 
-  const toggleComplete = async (task) => {
-    try {
-      const response = await fetch(`${API_URL}/api/tasks/${task._id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        credentials: 'omit',
-        body: JSON.stringify({ completed: !task.completed }),
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const updatedTask = await response.json();
-      setTasks(tasks.map(t => 
-        t._id === task._id ? updatedTask : t
-      ));
-    } catch (err) {
-      console.error('Error toggling task:', err);
-      setError(`Failed to update task: ${err.message}`);
-    }
-  };
-
   if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div className="error">Error: {error}</div>;
 
@@ -174,7 +147,7 @@ function App() {
       </form>
       <ul className="task-list">
         {tasks.map((task) => (
-          <li key={task._id} className={`task-item ${task.completed ? 'completed' : ''}`}>
+          <li key={task._id} className="task-item">
             {editingTask === task._id ? (
               <div className="edit-mode">
                 <input
@@ -194,12 +167,6 @@ function App() {
               </div>
             ) : (
               <div className="task-content">
-                <input
-                  type="checkbox"
-                  checked={task.completed}
-                  onChange={() => toggleComplete(task)}
-                  className="task-checkbox"
-                />
                 <span className="task-title" title={task.title}>{task.title}</span>
                 <div className="task-actions">
                   <button onClick={() => startEditing(task)} className="edit-btn">
