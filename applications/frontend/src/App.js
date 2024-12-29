@@ -7,8 +7,9 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Get API URL from runtime config or fallback to environment variable
-  const API_URL = window.REACT_APP_API_URL || process.env.REACT_APP_API_URL || 'http://localhost:3000';
+  // Get API URL from window object (set by config.js) or fall back to current host
+  const API_URL = window.REACT_APP_API_URL || window.location.origin;
+  console.log('Using API URL:', API_URL); // Debug log
 
   useEffect(() => {
     fetchTasks();
@@ -17,11 +18,18 @@ function App() {
   const fetchTasks = async () => {
     try {
       console.log('Fetching tasks from:', `${API_URL}/api/tasks`);
-      const response = await fetch(`${API_URL}/api/tasks`);
+      const response = await fetch(`${API_URL}/api/tasks`, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        credentials: 'omit' // Disable sending credentials
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
+      console.log('Received tasks:', data); // Debug log
       setTasks(data);
       setLoading(false);
     } catch (err) {
@@ -38,7 +46,9 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
+        credentials: 'omit', // Disable sending credentials
         body: JSON.stringify({ title: newTask }),
       });
       if (!response.ok) {

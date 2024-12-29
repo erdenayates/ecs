@@ -21,7 +21,8 @@ COPY nginx.conf /etc/nginx/templates/default.conf.template
 
 # Create a script to inject runtime environment variables
 RUN echo '#!/bin/sh' > /docker-entrypoint.sh && \
-    echo 'echo "window.REACT_APP_API_URL = \"$REACT_APP_API_URL\";" > /usr/share/nginx/html/config.js' >> /docker-entrypoint.sh && \
+    echo 'echo "window.REACT_APP_API_URL = \"${REACT_APP_API_URL}\";" > /usr/share/nginx/html/config.js' >> /docker-entrypoint.sh && \
+    echo 'sed -i "/<head>/a \    <script src=\"/config.js\"></script>" /usr/share/nginx/html/index.html' >> /docker-entrypoint.sh && \
     echo 'envsubst "\$BACKEND_URL" < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf' >> /docker-entrypoint.sh && \
     echo 'exec nginx -g "daemon off;"' >> /docker-entrypoint.sh && \
     chmod +x /docker-entrypoint.sh
