@@ -19,10 +19,15 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/templates/default.conf.template
 
-# Create a script to inject runtime environment variables
+# Create config.js template
+RUN echo 'window.REACT_APP_API_URL = "${REACT_APP_API_URL}";' > /usr/share/nginx/html/config.template.js
+
+# Create entrypoint script
 RUN echo '#!/bin/sh' > /docker-entrypoint.sh && \
-    echo 'echo "window.REACT_APP_API_URL = \"${REACT_APP_API_URL}\";" > /usr/share/nginx/html/config.js' >> /docker-entrypoint.sh && \
-    echo 'sed -i "/<head>/a \    <script src=\"/config.js\"></script>" /usr/share/nginx/html/index.html' >> /docker-entrypoint.sh && \
+    echo 'envsubst < /usr/share/nginx/html/config.template.js > /usr/share/nginx/html/config.js' >> /docker-entrypoint.sh && \
+    echo 'if ! grep -q "/config.js" /usr/share/nginx/html/index.html; then' >> /docker-entrypoint.sh && \
+    echo '  sed -i "s/<head>/<head><script src=\"\/config.js\"><\/script>/" /usr/share/nginx/html/index.html' >> /docker-entrypoint.sh && \
+    echo 'fi' >> /docker-entrypoint.sh && \
     echo 'envsubst "\$BACKEND_URL" < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf' >> /docker-entrypoint.sh && \
     echo 'exec nginx -g "daemon off;"' >> /docker-entrypoint.sh && \
     chmod +x /docker-entrypoint.sh

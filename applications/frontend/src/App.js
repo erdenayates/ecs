@@ -8,8 +8,14 @@ function App() {
   const [error, setError] = useState(null);
 
   // Get API URL from window object (set by config.js) or fall back to current host
-  const API_URL = window.REACT_APP_API_URL || window.location.origin;
-  console.log('Using API URL:', API_URL); // Debug log
+  const getApiUrl = () => {
+    console.log('window.REACT_APP_API_URL:', window.REACT_APP_API_URL);
+    console.log('window.location.origin:', window.location.origin);
+    return window.REACT_APP_API_URL || window.location.origin;
+  };
+
+  const API_URL = getApiUrl();
+  console.log('Using API URL:', API_URL);
 
   useEffect(() => {
     fetchTasks();
@@ -17,19 +23,30 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      console.log('Fetching tasks from:', `${API_URL}/api/tasks`);
-      const response = await fetch(`${API_URL}/api/tasks`, {
+      const url = `${API_URL}/api/tasks`;
+      console.log('Fetching tasks from:', url);
+      console.log('Request headers:', {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      });
+
+      const response = await fetch(url, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
         credentials: 'omit' // Disable sending credentials
       });
+
+      console.log('Response status:', response.status);
+      console.log('Response headers:', [...response.headers.entries()]);
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+
       const data = await response.json();
-      console.log('Received tasks:', data); // Debug log
+      console.log('Received tasks:', data);
       setTasks(data);
       setLoading(false);
     } catch (err) {
