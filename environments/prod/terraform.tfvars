@@ -30,7 +30,7 @@ frontend_image = "public.ecr.aws/h2n4d7m6/task-manager-frontend:latest"
 backend_image  = "public.ecr.aws/h2n4d7m6/task-manager-backend:latest"
 
 # DocumentDB Configuration
-documentdb_instance_count = 2
+documentdb_instance_count = 1
 documentdb_instance_class = "db.t3.medium"
 documentdb_master_username = "dbadmin"
 # Note: Don't store sensitive values in terraform.tfvars
