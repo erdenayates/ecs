@@ -33,7 +33,7 @@ resource "aws_ecs_task_definition" "frontend" {
         },
         {
           name  = "REACT_APP_API_URL"
-          value = "http://${var.alb_dns_name}"
+          value = "http://${var.alb_dns_name}:3000"
         }
       ]
       logConfiguration = {
@@ -164,6 +164,14 @@ resource "aws_security_group" "backend" {
     to_port         = 3000
     protocol        = "tcp"
     security_groups = [var.alb_security_group_id]
+  }
+
+  ingress {
+    from_port       = 3000
+    to_port         = 3000
+    protocol        = "tcp"
+    security_groups = [aws_security_group.frontend.id]
+    description     = "Allow traffic from frontend containers"
   }
 
   egress {
