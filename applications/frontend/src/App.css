@@ -10,6 +10,9 @@
   --white: #ffffff;
   --shadow: 0 4px 6px rgba(33, 150, 243, 0.1);
   --hover-shadow: 0 8px 12px rgba(33, 150, 243, 0.2);
+  --danger: #f44336;
+  --success: #4caf50;
+  --warning: #ff9800;
 }
 
 body {
@@ -175,5 +178,168 @@ li {
 
   button {
     width: 100%;
+  }
+}
+
+.add-task-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  padding: 1rem;
+  margin: 0.8rem 0;
+  background: var(--white);
+  border-left: 4px solid var(--primary-blue);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.task-item.completed {
+  border-left-color: var(--success);
+  background: #f8f9fa;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 2px solid var(--primary-blue);
+  border-radius: 4px;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: var(--warning);
+  color: white;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.save-btn {
+  background: var(--success);
+  color: white;
+}
+
+.cancel-btn {
+  background: var(--text-secondary);
+  color: white;
+}
+
+.edit-btn:hover, .delete-btn:hover, .save-btn:hover, .cancel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.edit-mode {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid var(--primary-light);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Animation for completed tasks */
+@keyframes completeTask {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.completed {
+  animation: completeTask 0.3s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .task-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .edit-mode {
+    flex-direction: column;
+  }
+
+  .edit-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    width: 48%;
   }
 } 

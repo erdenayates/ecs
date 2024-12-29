@@ -116,7 +116,7 @@ app.get('/', (req, res) => {
 app.get('/tasks', async (req, res) => {
   try {
     console.log('Fetching tasks...');
-    const tasks = await Task.find();
+    const tasks = await Task.find().sort({ createdAt: -1 });
     console.log('Found tasks:', tasks);
     res.json(tasks);
   } catch (error) {
@@ -129,12 +129,47 @@ app.post('/tasks', async (req, res) => {
   try {
     console.log('Received task creation request:', req.body);
     const task = new Task(req.body);
-    console.log('Created task object:', task);
     const savedTask = await task.save();
     console.log('Saved task:', savedTask);
     res.status(201).json(savedTask);
   } catch (error) {
     console.error('Error creating task:', error);
     res.status(400).json({ error: 'Error creating task', details: error.message });
+  }
+});
+
+// Update task
+app.put('/tasks/:id', async (req, res) => {
+  try {
+    console.log('Updating task:', req.params.id, req.body);
+    const task = await Task.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      { new: true, runValidators: true }
+    );
+    if (!task) {
+      return res.status(404).json({ error: 'Task not found' });
+    }
+    console.log('Updated task:', task);
+    res.json(task);
+  } catch (error) {
+    console.error('Error updating task:', error);
+    res.status(400).json({ error: 'Error updating task', details: error.message });
+  }
+});
+
+// Delete task
+app.delete('/tasks/:id', async (req, res) => {
+  try {
+    console.log('Deleting task:', req.params.id);
+    const task = await Task.findByIdAndDelete(req.params.id);
+    if (!task) {
+      return res.status(404).json({ error: 'Task not found' });
+    }
+    console.log('Deleted task:', task);
+    res.json({ message: 'Task deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting task:', error);
+    res.status(400).json({ error: 'Error deleting task', details: error.message });
   }
 }); 
